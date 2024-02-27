@@ -17,7 +17,6 @@ How you design your page is up to you, but take accessibility into account when 
 Feel free to use Typeform Survey Templates to get inspired.
 
 ## Requirements:
-- Your survey needs to be a multi-step form
 - Your survey should consist of at least 3 questions.
 - At least one question should use radio buttons.
 - At least one question should use a select dropdown.
