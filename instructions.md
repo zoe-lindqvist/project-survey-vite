@@ -21,7 +21,7 @@ Feel free to use Typeform Survey Templates to get inspired.
 - At least one question should use radio buttons.
 - At least one question should use a select dropdown.
 - There should be a submit button. When pressed, your app should hide the input form and show a summary of the user's submissions.
-- Your portfolio should be following accessibility guidelines to ensure your website is usable by a diverse range of users:
+- Your app should be following accessibility guidelines to ensure your website is usable by a diverse range of users:
     - You should have a score of at least 95 in [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
     - All images should have alt attributes and proper sizes
     - All contrasts should be OK
