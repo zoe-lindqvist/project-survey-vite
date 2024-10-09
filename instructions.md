@@ -1,12 +1,12 @@
 # Instructions
 
-This week, we will be practicing React state and controlled forms by making a Typeform-like product. Your completed project should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
+This week, we will practice React state and controlled forms by making a quiz or a survey. Your completed project should consist of at least three questions that users need to answer. When the user presses submit, they should see a summary of their answers.
 
 ## Context:
 
-You can choose what you'd like your survey to be about. Perhaps you'd like to ask other developers what they think about different technologies, or perhaps you'd like to ask people about their favourite foods or hobbies. It's completely up to you.
+You can choose what you'd like your survey to be about. Perhaps you want to do a Buzzfeed-style quiz on "What character are you from the series Stranger Things?" or maybe you'd like to survey people about their favourite hobbies or what other developers think about different technologies. It's entirely up to you.
 
-Once a user has “submitted” the survey you created, they should see a summary. It doesn't actually need to be submitted anywhere - the focus here is to practice using React state and controlling forms.
+Once a user has “submitted” the answers, they should see a summary. It doesn't actually need to be submitted anywhere - the focus here is to practice using React state and controlling forms.
 
 You don't have to use a lot of components to start with when doing this project. See that as more of a stretch goal…
 
@@ -14,20 +14,27 @@ You don't have to use a lot of components to start with when doing this project.
 
 How you design your page is up to you, but take accessibility into account when you are styling your form elements - so inputs should have labels and should be easily readable and usable. We STRONGLY recommend having some kind of design or sketch before starting to code.
 
-Feel free to use Typeform Survey Templates to get inspired.
+## How to get started
+1. **Person A** forks the repo
+2. **Person A** invites person B as a collaborator to the repo (Settings -> Collaborators and teams -> Add people)
+3. **Person A** clones the repo
+4. **Both of you** lay out the foundation together by pair programming using Live Share
+5. When it's time to split up, **person B** also needs to clone the repo.
+6. Work on different features (for example, different quiz questions) in different branches
+7. When you're done with a feature, it's time to merge! You choose if you want to work with PRs and code reviews or if you want to do this more verbally before you merge.
 
 ## Requirements:
-- Your survey should consist of at least 3 questions.
+- Your app should consist of at least 3 questions.
 - At least one question should use radio buttons.
 - At least one question should use a select dropdown.
 - There should be a submit button. When pressed, your app should hide the input form and show a summary of the user's submissions.
-- Your app should be following accessibility guidelines to ensure your website is usable by a diverse range of users:
-    - You should have a score of at least 95 in [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
-    - All images should have alt attributes and proper sizes
-    - All contrasts should be OK
-- Follow the guidelines on [how to write good code](https://www.notion.so/Guidelines-for-how-to-write-good-code-59abdd4307a24f5ca7914d566326f4df?pvs=21)
+- Your project should be following accessibility guidelines to ensure your website is usable by a diverse range of users:
+  - You should have a score of at least 95 in [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
+  - You should use semantic HTML elements
+  - All images should have alt attributes and proper sizes
+  - All contrasts should be OK
+- Follow the guidelines on how to write clean code
 - Make your app responsive (it should look good on devices from 320px width up to 1600px)
-
 
 ## Stretch goals
 So you’ve completed the requirements? Great job! Ensure you've committed and pushed a version of your project before starting on the stretch goals. Remember that the stretch goals are optional.
