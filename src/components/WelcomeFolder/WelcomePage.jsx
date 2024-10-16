@@ -35,4 +35,9 @@ const WelcomePage = ({ onStartQuiz }) => {
   );
 };
 
+// PropTypes validation for onStartQuiz
+WelcomePage.propTypes = {
+  onStartQuiz: PropTypes.func.isRequired,
+};
+
 export default WelcomePage;
