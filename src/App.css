@@ -1,1 +1,25 @@
-/* here goes the media queries */
+/* Resetting margins and padding globally */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Ensure full-height layout for the welcome page */
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Disable scrolling */
+}
+
+/* Ensure that the welcome container takes up the full viewport */
+.welcome-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw; /* Full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Prevent content overflow */
+}

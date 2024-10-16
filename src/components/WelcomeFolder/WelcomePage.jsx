@@ -1,21 +1,18 @@
 import React from 'react';
+import Header from '../HeaderFolder/Header';
+import backgroundImage from '../../assets/background.jpeg'; // Importing image as a module
 import './WelcomePage.css';
 
-const WelcomePage = ({ startQuiz }) => {
+const WelcomePage = () => {
   return (
-    <div className="welcome-page">
-      <header className="header">
-        <h1 className="app-title">Paw Pops</h1>
-        <div className="search-icon">
-          <img src="/src/assets/search.png" alt="Search icon" className="search-image" />
-        </div>
-      </header>
-
-      <div className="hero-section">
-        <img src="/src/assets/hero.jpg" alt="Hero" className="hero-image" />
-        <div className="hero-overlay">
-          <h2 className="hero-title">Dive into Fun with Paw Pops!</h2>
-          <button className="start-button" onClick={startQuiz}>Start the Quiz!</button>
+    <div className="welcome-container">
+      <img src={backgroundImage} alt="Background" className="background-image" />
+      <Header />
+      <div className="welcome-content">
+        <div className="welcome-text">
+          <h1>Take a Paw-some Quiz Adventure!</h1>
+          <p>Test your knowledge on cute animals and collect rewards as you go!</p>
+          <button className="start-button">Start this quiz!</button>
         </div>
       </div>
     </div>
