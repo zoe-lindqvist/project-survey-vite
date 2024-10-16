@@ -1,33 +1,63 @@
-/* eslint-disable react/prop-types */
-// src/components/Question.jsx
-import { Dropdown } from "../DropdownFolder/Dropdown";
+import React, { useState } from 'react';
+import logo from '../../assets/logo.png'; 
+import frogImage from '../../assets/frog.png'; 
+import positiveIcon from '../../assets/positive.png';  
+import negativeIcon from '../../assets/negative.png';  
+import './Question.css';
 
-export const Question = ({ question, onAnswer, onNext }) => {
-  const handleInputChange = (e) => onAnswer(e.target.value);
+const QuizPage = () => {
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [isCorrect, setIsCorrect] = useState(null); 
+
+  const handleAnswerClick = (answer) => {
+    if (answer === 'Lungs') {
+      setIsCorrect(true);
+    } else {
+      setIsCorrect(false);
+    }
+    setSelectedAnswer(answer);
+  };
 
   return (
-    <div>
-      <h2>{question.text}</h2>
-      {question.type === "text" && (
-        <input type="text" onChange={handleInputChange} required />
-      )}
-      {question.type === "radio" &&
-        question.options.map((option, index) => (
-          <label key={index}>
-            <input
-              type="radio"
-              name="radio"
-              value={option}
-              onChange={handleInputChange}
-              required
-            />
-            {option}
-          </label>
+    <div className="quiz-container">
+      <img src={logo} alt="Paw Pop Logo" className="quiz-logo" />
+      
+      <div className="progress-bar">
+        <div className="dot active"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+      </div>
+
+      <div className="quiz-question">
+        <h2>Which of the following adaptations helps frogs breathe in water and on land?</h2>
+        <img src={frogImage} alt="Frog" className="animal-image" />
+      </div>
+
+      <div className="answer-options">
+        {['Gills', 'Lungs', 'Scales', 'Fins'].map((answer) => (
+          <button
+            key={answer}
+            className={`answer-button ${selectedAnswer === answer ? (isCorrect ? 'positive' : 'negative') : ''}`}
+            onClick={() => handleAnswerClick(answer)}
+          >
+            {answer}
+            {selectedAnswer === answer && (
+              <img
+                src={isCorrect ? positiveIcon : negativeIcon}  
+                alt={isCorrect ? 'Correct' : 'Incorrect'}
+                className="checkmark"
+              />
+            )}
+          </button>
         ))}
-      {question.type === "select" && (
-        <Dropdown options={question.options} onChange={handleInputChange} />
-      )}
-      <button onClick={onNext}>Next</button>
+      </div>
     </div>
   );
 };
+
+export default QuizPage;

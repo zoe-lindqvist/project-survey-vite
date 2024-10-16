@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../../assets/logo.png';  // Corrected path
-import searchIcon from '../../assets/search.png'; // Corrected path
+import logo from '../../assets/logo.png'; 
+import searchIcon from '../../assets/search.png';
 import './header.css';
 
 const Header = () => {

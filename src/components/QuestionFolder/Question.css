@@ -1,0 +1,89 @@
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5C7F4E;
+    height: 100vh;
+    padding: 0;
+    justify-content: space-around; 
+}
+
+.quiz-logo {
+    margin-top: 5px;
+    width: 70px;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    margin: 2px 0;
+}
+
+.dot {
+    width: 30px;
+    height: 5px;
+    background-color: #CCC;
+    margin: 0 3px; /* Smaller margin */
+    border-radius: 5px;
+}
+
+.dot.active {
+    background-color: #808080;
+}
+
+.quiz-question {
+    text-align: center;
+    color: white;
+    margin: 5px 0; /* Less margin */
+}
+
+.animal-image {
+    max-width: 80%; 
+    max-height: 300px; 
+    border-radius: 10px;
+    margin-bottom: 10px; /* Smaller bottom margin */
+}
+
+.answer-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px; /* Reduced gap */
+    margin-top: 10px; /* Reduced margin */
+}
+
+.answer-button {
+    background-color: #E0E0E0;
+    padding: 12px;
+    width: 130px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center text and icon horizontally */
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.answer-button .checkmark {
+    margin-left: 10px; /* Add some space between the text and icon */
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px; /* Push the icon to the right edge */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.answer-button.positive {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.answer-button.negative {
+    background-color: #F44336;
+    color: white;
+}
