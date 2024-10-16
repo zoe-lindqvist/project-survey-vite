@@ -1,8 +1,15 @@
-/* eslint-disable react/prop-types */
-// src/components/Header.jsx
-export const Header = ({ title, subtitle }) => (
-  <header>
-    <h1>{title}</h1>
-    <h2>{subtitle}</h2>
-  </header>
-);
+import React from 'react';
+import logo from '../../assets/logo.png';  // Corrected path
+import searchIcon from '../../assets/search.png'; // Corrected path
+import './header.css';
+
+const Header = () => {
+  return (
+    <div className="header">
+      <img src={logo} alt="Paw Pops Logo" className="logo" />
+      <img src={searchIcon} alt="Search" className="search-icon" />
+    </div>
+  );
+};
+
+export default Header;
