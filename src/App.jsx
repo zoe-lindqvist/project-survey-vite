@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import WelcomePage from './components/WelcomeFolder/WelcomePage.jsx';
 import QuestionPage from './components/QuestionFolder/Question.jsx';
 import './App.css';
