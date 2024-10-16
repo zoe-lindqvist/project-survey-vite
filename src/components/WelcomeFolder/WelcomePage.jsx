@@ -2,7 +2,7 @@ import Header from "../HeaderFolder/Header";
 import backgroundImage from "../../assets/background.jpeg"; // Importing image as a module
 import "./WelcomePage.css";
 
-const WelcomePage = () => {
+const WelcomePage = ({ onStartQuiz }) => {  // Accept the prop here
   return (
     <div className="welcome-container">
       <img
