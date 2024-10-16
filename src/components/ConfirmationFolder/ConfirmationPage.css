@@ -1,0 +1,70 @@
+/* General layout */
+.confirmation-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #fffdf9;
+  }
+  
+  /* Title */
+  .app-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Star image */
+  .confirmation-star {
+    margin-bottom: 20px;
+  }
+  
+  .star-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Score Title */
+  .score-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Confirmation message */
+  .confirmation-message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* Score Badge */
+  .score-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fef3e6;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .lightning-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  
+  .score-points {
+    font-size: 1.2rem;
+  }
+  

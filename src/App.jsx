@@ -1,10 +1,10 @@
 // src/App.jsx
 import { useState } from "react";
-import { Header } from "./components/Header";
-import { WelcomePage } from "./components/WelcomePage";
-import { Question } from "./components/Question";
-import { Summary } from "./components/Summary";
-import { SubmitBtn } from "./components/SubmitBtn";
+import { Header } from "./components/HeaderFolder/Header";
+import WelcomePage from "./components/WelcomeFolder/WelcomePage";
+import { Question } from "./components/QuestionFolder/Question";
+import { Summary } from "./components/SummaryFolder/Summary";
+import { SubmitBtn } from "./components/SubmitbtnFolder/SubmitBtn";
 
 export const App = () => {
   const [started, setStarted] = useState(false);

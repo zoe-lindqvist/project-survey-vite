@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // src/components/Question.jsx
-import { Dropdown } from "./Dropdown";
+import { Dropdown } from "../DropdownFolder/Dropdown";
 
 export const Question = ({ question, onAnswer, onNext }) => {
   const handleInputChange = (e) => onAnswer(e.target.value);
