@@ -1,22 +1,24 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Prevents scrolling */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevents scrolling */
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden; 
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .welcome-container {
-    position: relative;
-    height: 100vh;
-    width: 100vw; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden; 
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  overflow: hidden;
+  text-align: center; /* Center align text content */
 }
