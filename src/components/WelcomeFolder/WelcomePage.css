@@ -1,23 +1,29 @@
+/* General layout */
 .welcome-page {
-    padding: 20px;
-    background-color: #fffdf9;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
   }
   
-  /* Header */
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 20px;
+    z-index: 10; /* Ensures it stays above the hero image */
+    position: absolute;
+    top: 0;
   }
   
   .app-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    color: #333;
+    color: #fff; /* White to contrast with background */
   }
   
   .search-icon {
@@ -27,66 +33,62 @@
   }
   
   .search-image {
-    width: 24px; /* Set a fixed width */
-    height: 24px; /* Set a fixed height */
+    width: 24px;
+    height: 24px;
   }
   
-  /* Main content */
-  .content {
-    flex-grow: 1;
+  /* Hero section */
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-size: cover;
   }
   
-  .welcome-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  /* Card styling */
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f7f0ff;
-    border-radius: 20px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-image {
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-radius: 15px;
-    margin-bottom: 15px;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Hero image is underneath the text */
   }
   
-  .card-text {
+  .hero-overlay {
+    position: relative;
+    z-index: 2;
     text-align: center;
+    color: #fff;
   }
   
-  .card-title {
+  .hero-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
   
-  .card-points {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #666;
-    margin-top: 5px;
+  /* Start Button */
+  .start-button {
+    padding: 15px 30px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   }
   
-  .lightning-icon {
-    margin-right: 5px;
-    font-size: 1.2rem;
+  .start-button:hover {
+    background-color: #ff3b2f;
   }
+  
   

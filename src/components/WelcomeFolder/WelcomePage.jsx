@@ -1,7 +1,7 @@
 import React from 'react';
 import './WelcomePage.css';
 
-const WelcomePage = () => {
+const WelcomePage = ({ startQuiz }) => {
   return (
     <div className="welcome-page">
       <header className="header">
@@ -11,19 +11,13 @@ const WelcomePage = () => {
         </div>
       </header>
 
-      <main className="content">
-        <h2 className="welcome-title">Learn through surveys</h2>
-
-        <div className="card">
-          <img src="/src/assets/dolphin.png" alt="Sea Creatures" className="card-image" />
-          <div className="card-text">
-            <h3 className="card-title">Dive into sea creatures</h3>
-            <p className="card-points">
-              <span className="lightning-icon">⚡</span> 1,250 points
-            </p>
-          </div>
+      <div className="hero-section">
+        <img src="/src/assets/hero.jpg" alt="Hero" className="hero-image" />
+        <div className="hero-overlay">
+          <h2 className="hero-title">Dive into Fun with Paw Pops!</h2>
+          <button className="start-button" onClick={startQuiz}>Start the Quiz!</button>
         </div>
-      </main>
+      </div>
     </div>
   );
 };
