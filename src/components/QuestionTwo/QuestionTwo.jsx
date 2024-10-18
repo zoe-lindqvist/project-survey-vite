@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import otterImage from "../../assets/otter.jpeg";
@@ -5,7 +6,8 @@ import positiveIcon from "../../assets/positive.png";
 import negativeIcon from "../../assets/negative.png";
 import "./QuestionTwo.css";
 
-const QuestionTwo = ({ onNext }) => { // Accept onNext as a prop
+const QuestionTwo = ({ onNext }) => {
+  // Accept onNext as a prop
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
 
@@ -25,7 +27,14 @@ const QuestionTwo = ({ onNext }) => { // Accept onNext as a prop
     <div className="quiz-container-two">
       <img src={logo} alt="Paw Pop Logo" className="quiz-logo" />
 
-      <div className="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="1" aria-valuemax="8" aria-label="Quiz progress">
+      <div
+        className="progress-bar"
+        role="progressbar"
+        aria-valuenow="2"
+        aria-valuemin="1"
+        aria-valuemax="8"
+        aria-label="Quiz progress"
+      >
         <div className="dot"></div>
         <div className="dot active"></div>
         <div className="dot"></div>
@@ -47,7 +56,13 @@ const QuestionTwo = ({ onNext }) => { // Accept onNext as a prop
         {["Shells", "Seaweed", "Rocks", "Each others paws"].map((answer) => (
           <button
             key={answer}
-            className={`answer-button ${selectedAnswer === answer ? (isCorrect ? "positive" : "negative") : ""}`}
+            className={`answer-button ${
+              selectedAnswer === answer
+                ? isCorrect
+                  ? "positive"
+                  : "negative"
+                : ""
+            }`}
             onClick={() => handleAnswerClick(answer)}
             aria-pressed={selectedAnswer === answer}
             aria-label={`Answer: ${answer}`}
@@ -56,7 +71,11 @@ const QuestionTwo = ({ onNext }) => { // Accept onNext as a prop
             {selectedAnswer === answer && (
               <img
                 src={isCorrect ? positiveIcon : negativeIcon}
-                alt={isCorrect ? "Correct answer selected" : "Incorrect answer selected"}
+                alt={
+                  isCorrect
+                    ? "Correct answer selected"
+                    : "Incorrect answer selected"
+                }
                 className="checkmark"
                 aria-live="assertive"
               />
