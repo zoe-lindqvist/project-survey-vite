@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import koalaImage from "../../assets/koala.jpeg";
-import "./QuestionFive.css";
+import "./QuestionSix.css";
 
 // eslint-disable-next-line react/prop-types
 const QuestionSix = ({ onNext, onNavigateToQuestion }) => {
@@ -12,7 +12,7 @@ const QuestionSix = ({ onNext, onNavigateToQuestion }) => {
   const handleAnswerClick = (event) => {
     const answer = event.target.value;
     setSelectedAnswer(answer);
-    if (answer === "Sing a cheerful song") {
+    if (answer === "Hug a tree") {
       setIsCorrect(true);
       setTimeout(() => {
         onNext(); // Move to the next question after a short delay
@@ -43,14 +43,16 @@ const QuestionSix = ({ onNext, onNavigateToQuestion }) => {
         {[...Array(8)].map((_, index) => (
           <div
             key={index}
-            className={`dot ${index === 4 ? "active" : ""}`} // Marks the 5th question
+            className={`dot ${index === 5 ? "active" : ""}`} // Marks the 5th question
             onClick={() => handleDotClick(index)}
           ></div>
         ))}
       </div>
 
       <div className="quiz-question">
-        <h2 aria-live="polite">What do birds do to show they are happy?</h2>
+        <h2 aria-live="polite">
+          What do koalas do when they are feeling sleepy?
+        </h2>
         <img src={koalaImage} alt="A bird" className="animal-image" />
       </div>
 
@@ -60,7 +62,7 @@ const QuestionSix = ({ onNext, onNavigateToQuestion }) => {
             id="dropdown"
             value={selectedAnswer}
             onChange={handleAnswerClick}
-            className={`dropdown ${
+            className={`dropdown-six ${
               isCorrect === true
                 ? "correct"
                 : isCorrect === false
@@ -71,12 +73,10 @@ const QuestionSix = ({ onNext, onNavigateToQuestion }) => {
             <option value="" disabled>
               Select an answer
             </option>
-            <option value="Do a little dance">Do a little dance</option>
-            <option value="Fluff up their feathers">
-              Fluff up their feathers
-            </option>
-            <option value="Fly in circles">Fly in circles</option>
-            <option value="Sing a cheerful song">Sing a cheerful song</option>
+            <option value="Curl up in a ball">Curl up in a ball</option>
+            <option value="Hug a tree">Hug a tree</option>
+            <option value="Fly in circles">Yawn adorably</option>
+            <option value="Sing a cheerful song">Wiggle their ears</option>
           </select>
         </label>
       </div>

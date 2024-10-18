@@ -6,6 +6,8 @@ import QuestionTwo from "./components/QuestionTwo/QuestionTwo.jsx";
 import QuestionThree from "./components/QuestionThree/QuestionThree.jsx";
 import QuestionFour from "./components/QuestionFour/QuestionFour.jsx";
 import QuestionFive from "./components/QuestionFive/QuestionFive.jsx";
+import QuestionSix from "./components/QuestionSix/QuestionSix.jsx";
+import QuestionSeven from "./components/QuestionSeven/QuestionSeven.jsx";
 
 import "./App.css";
 
