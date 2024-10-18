@@ -22,7 +22,7 @@ const QuestionOne = ({ onNext }) => { // Accept onNext as a prop
   };
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container-one">
       <img src={logo} alt="Paw Pop Logo" className="quiz-logo" />
 
       <div className="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="8" aria-label="Quiz progress">
