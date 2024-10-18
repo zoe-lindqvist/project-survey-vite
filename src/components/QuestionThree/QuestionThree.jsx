@@ -32,7 +32,7 @@ const QuestionThree = ({ onNext, onNavigateToQuestion }) => {
   };
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-container-three">
       <img src={logo} alt="Paw Pop Logo" className="quiz-logo" />
 
       <div
