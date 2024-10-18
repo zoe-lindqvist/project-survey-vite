@@ -14,7 +14,7 @@ const QuestionFour = ({ onNext, onNavigateToQuestion }) => {
 
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
-    if (answer === "Their tails") {
+    if (answer === "Nuzzle their mom's face") {
       setIsCorrect(true);
       setTimeout(() => {
         onNext(); // Move to the next question after a short delay

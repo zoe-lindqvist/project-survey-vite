@@ -5,6 +5,7 @@ import QuestionOne from "./components/QuestionOne/QuestionOne";
 import QuestionTwo from "./components/QuestionTwo/QuestionTwo.jsx";
 import QuestionThree from "./components/QuestionThree/QuestionThree.jsx";
 import QuestionFour from "./components/QuestionFour/QuestionFour.jsx";
+import QuestionFive from "./components/QuestionFive/QuestionFive.jsx";
 
 import "./App.css";
 
