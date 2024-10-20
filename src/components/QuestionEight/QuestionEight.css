@@ -1,0 +1,62 @@
+.quiz-container-eight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f24b4b;
+    height: 100vh;
+    padding: 0;
+    justify-content: space-around;
+}
+
+.answer-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.draggable-answer {
+    padding: 10px;
+    background-color: #2b6639;
+    border-radius: 8px;
+    cursor: grab;
+    width: 150px;
+    text-align: center;
+    margin: 0 10px;
+    color: white;
+}
+
+.draggable-answer:hover {
+    background-color: #031021;
+}
+
+.drop-zone {
+    margin: 20px auto;
+    padding: 10px 15px;
+    border: 2px dashed #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    color: #2c2c2c;
+    min-height: 60px;
+    max-width: 70%;
+}
+
+.correct-text {
+    color: #4caf50;
+    margin-top: 10px;
+}
+
+.incorrect-text {
+    color: #f44336;
+    margin-top: 10px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.result-icon {
+    width: 30px;
+    height: 30px;
+}

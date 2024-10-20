@@ -23,18 +23,19 @@
   width: 150px;
   text-align: center;
   margin: 0 10px;
-  color: white; /* Set the text color to white */
+  color: white; 
 }
 
 .drop-zone {
-  margin-top: 20px;
-  padding: 30px;
+  margin: 20px auto;
+  padding: 10px 15px; 
   border: 2px dashed #ffffff;
   border-radius: 10px;
   text-align: center;
   color: #2c2c2c;
-  min-height: 80px;
-}
+  min-height: 60px; 
+  max-width: 70%;
+}  
 
 .correct-text {
   color: #4caf50;

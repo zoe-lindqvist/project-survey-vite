@@ -43,7 +43,7 @@ const QuestionSix = ({ onNext, onNavigateToQuestion }) => {
         {[...Array(8)].map((_, index) => (
           <div
             key={index}
-            className={`dot ${index === 5 ? "active" : ""}`} // Marks the 5th question
+            className={`dot ${index === 5 ? "active" : ""}`} 
             onClick={() => handleDotClick(index)}
           ></div>
         ))}
