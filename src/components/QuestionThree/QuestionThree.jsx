@@ -39,7 +39,7 @@ const QuestionThree = ({ onNext, onScoreChange }) => {
         {[...Array(8)].map((_, index) => (
           <div
             key={index}
-            className={`dot ${index === 3 ? "active" : ""}`}
+            className={`dot ${index === 2 ? "active" : ""}`}
             onClick={() => handleDotClick(index)}
           ></div>
         ))}
