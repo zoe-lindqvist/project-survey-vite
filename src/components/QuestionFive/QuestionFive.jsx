@@ -60,7 +60,7 @@ const QuestionFive = ({ onNext, onNavigateToQuestion }) => {
             id="dropdown"
             value={selectedAnswer}
             onChange={handleAnswerClick}
-            className={`dropdown ${
+            className={`dropdown-five ${
               isCorrect === true
                 ? "correct"
                 : isCorrect === false
