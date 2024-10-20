@@ -21,7 +21,7 @@
 .welcome-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   flex-grow: 1;
   padding: 80px;
   z-index: 1;
@@ -30,7 +30,7 @@
 .welcome-text {
   text-align: left;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   max-width: 1000px;
 }
 
@@ -42,11 +42,11 @@
 
 .welcome-text p {
   font-size: 1.2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .start-button {
-  background-color: #c34113; 
+  background-color: #c34113;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -58,4 +58,55 @@
 
 .start-button:hover {
   background-color: #e64a19;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .welcome-container {
+    justify-content: center;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .welcome-content {
+    padding: 40px; /* Reduce padding for smaller screens */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .welcome-text {
+    max-width: 90%; /* Limit the width of the text to fit smaller screens */
+    text-align: center; /* Center the text for smaller screens */
+  }
+
+  .welcome-text h1 {
+    font-size: 2.2rem; /* Reduce heading size for smaller screens */
+  }
+
+  .welcome-text p {
+    font-size: 1rem; /* Reduce paragraph size for smaller screens */
+  }
+
+  .start-button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-content {
+    padding: 20px; /* Further reduce padding for very small screens */
+  }
+
+  .welcome-text h1 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .welcome-text p {
+    font-size: 0.9rem; /* Further reduce paragraph size */
+  }
+
+  .start-button {
+    font-size: 0.9rem; /* Reduce button font size */
+    padding: 6px 12px; /* Adjust button padding */
+  }
 }

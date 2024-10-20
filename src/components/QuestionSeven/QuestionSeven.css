@@ -3,15 +3,17 @@
   flex-direction: column;
   align-items: center;
   background-color: #758e9f;
-  height: 100vh;
-  padding: 0;
-  justify-content: space-around;
+  min-height: 100vh; /* Allow the container to grow */
+  padding: 10px; /* Add padding */
+  justify-content: flex-start; /* Align items from the top */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .answer-options {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .draggable-answer-seven {
@@ -21,20 +23,20 @@
   cursor: grab;
   width: 150px;
   text-align: center;
-  margin: 0 10px;
-  color: white; 
+  margin: 10px; /* Add margin for better spacing on small screens */
+  color: white;
 }
 
 .drop-zone {
   margin: 20px auto;
-  padding: 10px 15px; 
+  padding: 10px 15px;
   border: 2px dashed #ffffff;
   border-radius: 10px;
   text-align: center;
   color: #2c2c2c;
-  min-height: 60px; 
+  min-height: 60px;
   max-width: 70%;
-}  
+}
 
 .correct-text {
   color: #4caf50;
@@ -46,9 +48,10 @@
   margin-top: 10px;
 }
 
-.draggable-answer:hover {
+.draggable-answer-seven:hover {
   background-color: #031021;
 }
+
 .icon-container {
   display: flex;
   align-items: center;
@@ -58,4 +61,36 @@
 .result-icon {
   width: 30px;
   height: 30px;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .quiz-container-seven {
+    padding: 15px; /* Adjust padding */
+  }
+
+  .draggable-answer-seven {
+    width: 100%; /* Full width for draggable answers */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .drop-zone {
+    max-width: 100%; /* Full width for the drop zone */
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container-seven {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .draggable-answer-seven {
+    width: 100%; /* Full width for draggable answers */
+    font-size: 12px; /* Further reduce font size for smaller screens */
+  }
+
+  .drop-zone {
+    max-width: 100%; /* Full width for the drop zone */
+    min-height: 50px; /* Reduce height for smaller screens */
+  }
 }

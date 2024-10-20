@@ -3,9 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #ffffff; 
+  min-height: 100vh; /* Allow the container to grow */
+  background-color: #ffffff;
   text-align: center;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Add padding for small screens */
 }
 
 .confirmation-logo {
@@ -48,3 +50,35 @@
   align-items: center;
 }
 
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .confirmation-container {
+    padding: 15px; /* Adjust padding for medium screens */
+  }
+
+  .confirmation-star {
+    width: 300px; /* Reduce star size for medium screens */
+  }
+
+  .confirmation-title {
+    font-size: 30px; /* Adjust title size */
+  }
+}
+
+@media (max-width: 480px) {
+  .confirmation-container {
+    padding: 10px; /* Reduce padding for small screens */
+  }
+
+  .confirmation-star {
+    width: 250px; /* Further reduce star size for small screens */
+  }
+
+  .confirmation-title {
+    font-size: 24px; /* Further reduce title size */
+  }
+
+  .confirmation-subtitle {
+    font-size: 16px; /* Adjust subtitle size */
+  }
+}

@@ -3,9 +3,10 @@
   flex-direction: column;
   align-items: center;
   background-color: #552c19;
-  height: 100vh;
-  padding: 0;
-  justify-content: space-around;
+  min-height: 100vh; /* Allow the container to grow */
+  padding: 10px; /* Add some padding */
+  justify-content: flex-start; /* Align items from the top */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .answer-options {
@@ -33,11 +34,11 @@
 }
 
 .checkmark {
-  width: 20px; 
-  height: 20px; 
-  margin-left: 5px; 
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
   position: relative;
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .correct .checkmark {
@@ -45,5 +46,31 @@
 }
 
 .incorrect .checkmark {
-  color: #f44336; 
+  color: #f44336;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .quiz-container-four {
+    padding: 15px; /* Adjust padding */
+  }
+
+  .answer-label {
+    font-size: 14px; /* Slightly smaller text */
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container-four {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .answer-label {
+    font-size: 12px; /* Smaller text */
+  }
+
+  .checkmark {
+    width: 18px; /* Slightly smaller checkmark */
+    height: 18px;
+  }
 }
