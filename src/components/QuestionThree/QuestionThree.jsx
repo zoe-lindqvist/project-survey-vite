@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import foxImage from "../../assets/fox.jpeg";
@@ -6,28 +5,22 @@ import positiveIcon from "../../assets/positive.png";
 import negativeIcon from "../../assets/negative.png";
 import "./QuestionThree.css";
 
-// eslint-disable-next-line react/prop-types
-const QuestionThree = ({ onNext, onNavigateToQuestion }) => {
-  // Accept onNext and onNavigateToQuestion as props
+const QuestionThree = ({ onNext, onScoreChange }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
+  const [wrongAttempts, setWrongAttempts] = useState(0); 
 
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
     if (answer === "Their tails") {
       setIsCorrect(true);
       setTimeout(() => {
-        onNext(); // Move to the next question after a short delay
+        onScoreChange(wrongAttempts * 5); 
+        onNext(); 
       }, 1000);
     } else {
       setIsCorrect(false);
-    }
-  };
-
-  // Function to handle clicking on a dot
-  const handleDotClick = (questionIndex) => {
-    if (onNavigateToQuestion) {
-      onNavigateToQuestion(questionIndex);
+      setWrongAttempts(wrongAttempts + 1); 
     }
   };
 
@@ -46,47 +39,36 @@ const QuestionThree = ({ onNext, onNavigateToQuestion }) => {
         {[...Array(8)].map((_, index) => (
           <div
             key={index}
-            className={`dot ${index === 2 ? "active" : ""}`}
+            className={`dot ${index === 3 ? "active" : ""}`}
             onClick={() => handleDotClick(index)}
           ></div>
         ))}
       </div>
-
+      
       <div className="quiz-question">
-        <h2 aria-live="polite">
-          What do foxes use to communicate with each other?
-        </h2>
+        <h2>What do foxes use to communicate with each other?</h2>
         <img src={foxImage} alt="A fox" className="animal-image" />
       </div>
-
       <div className="answer-options">
-        {["Their ears", "Their paws", "Their noses", "Their tails"].map(
-          (answer) => (
-            <label key={answer} className="answer-label">
-              <input
-                type="radio"
-                name="answer"
-                value={answer}
-                checked={selectedAnswer === answer}
-                onChange={() => handleAnswerClick(answer)}
-                aria-label={`Answer: ${answer}`}
+        {["Their ears", "Their paws", "Their noses", "Their tails"].map((answer) => (
+          <label key={answer} className="answer-label">
+            <input
+              type="radio"
+              name="answer"
+              value={answer}
+              checked={selectedAnswer === answer}
+              onChange={() => handleAnswerClick(answer)}
+            />
+            {answer}
+            {selectedAnswer === answer && (
+              <img
+                src={isCorrect ? positiveIcon : negativeIcon}
+                alt={isCorrect ? "Correct answer" : "Incorrect answer"}
+                className="checkmark"
               />
-              {answer}
-              {selectedAnswer === answer && (
-                <img
-                  src={isCorrect ? positiveIcon : negativeIcon}
-                  alt={
-                    isCorrect
-                      ? "Correct answer selected"
-                      : "Incorrect answer selected"
-                  }
-                  className="checkmark"
-                  aria-live="assertive"
-                />
-              )}
-            </label>
-          )
-        )}
+            )}
+          </label>
+        ))}
       </div>
     </div>
   );

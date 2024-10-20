@@ -1,70 +1,50 @@
-/* General layout */
-.confirmation-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    padding: 20px;
-    background-color: #fffdf9;
-  }
-  
-  /* Title */
-  .app-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Star image */
-  .confirmation-star {
-    margin-bottom: 20px;
-  }
-  
-  .star-image {
-    width: 150px;
-    height: 150px;
-  }
-  
-  /* Score Title */
-  .score-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  /* Confirmation message */
-  .confirmation-message {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 30px;
-  }
-  
-  /* Score Badge */
-  .score-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fef3e6;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .lightning-icon {
-    font-size: 1.5rem;
-    margin-right: 10px;
-  }
-  
-  .score-points {
-    font-size: 1.2rem;
-  }
-  
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff; 
+  text-align: center;
+}
+
+.confirmation-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.confirmation-star {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.confirmation-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.confirmation-subtitle {
+  font-size: 18px;
+  color: #7f7f7f;
+  margin-bottom: 30px;
+}
+
+.score-box {
+  background-color: #f9f4e7;
+  border-radius: 20px;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #2c2c2c;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+}
+

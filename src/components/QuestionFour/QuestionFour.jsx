@@ -6,25 +6,25 @@ import positiveIcon from "../../assets/positive.png";
 import negativeIcon from "../../assets/negative.png";
 import "./QuestionFour.css";
 
-// eslint-disable-next-line react/prop-types
-const QuestionFour = ({ onNext, onNavigateToQuestion }) => {
-  // Accept onNext and onNavigateToQuestion as props
+const QuestionFour = ({ onNext, onScoreChange, onNavigateToQuestion }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
+  const [wrongAttempts, setWrongAttempts] = useState(0);
 
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
     if (answer === "Nuzzle their mom's face") {
       setIsCorrect(true);
       setTimeout(() => {
-        onNext(); // Move to the next question after a short delay
+        onScoreChange(wrongAttempts * 5);
+        onNext(); 
       }, 1000);
     } else {
       setIsCorrect(false);
+      setWrongAttempts(wrongAttempts + 1);
     }
   };
 
-  // Function to handle clicking on a dot
   const handleDotClick = (questionIndex) => {
     if (onNavigateToQuestion) {
       onNavigateToQuestion(questionIndex);
@@ -56,7 +56,7 @@ const QuestionFour = ({ onNext, onNavigateToQuestion }) => {
         <h2 aria-live="polite">
           What do lion cubs do when they want attention?
         </h2>
-        <img src={lionImage} alt="A fox" className="animal-image" />
+        <img src={lionImage} alt="A lion cub" className="animal-image" />
       </div>
 
       <div className="answer-options">

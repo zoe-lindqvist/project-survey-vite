@@ -2,35 +2,39 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import dolphinImage from "../../assets/dolphin.png";
-import positiveIcon from "../../assets/positive.png"; // Correct icon
-import negativeIcon from "../../assets/negative.png"; // Incorrect icon
+import positiveIcon from "../../assets/positive.png"; 
+import negativeIcon from "../../assets/negative.png"; 
 import "./QuestionSeven.css";
 
 // eslint-disable-next-line react/prop-types
-const QuestionSeven = ({ onNext, onNavigateToQuestion }) => {
+const QuestionSeven = ({ onNext, onNavigateToQuestion, onScoreChange }) => {
   const [isCorrect, setIsCorrect] = useState(null);
-  const [droppedAnswer, setDroppedAnswer] = useState(""); // For the dropped answer
+  const [droppedAnswer, setDroppedAnswer] = useState("");
+  const [wrongAttempts, setWrongAttempts] = useState(0);
 
   const handleDragStart = (event, answer) => {
-    event.dataTransfer.setData("text/plain", answer); // Set the dragged answer
+    event.dataTransfer.setData("text/plain", answer); 
   };
 
   const handleDrop = (event) => {
     event.preventDefault();
-    const answer = event.dataTransfer.getData("text/plain"); // Get the dropped answer
+    const answer = event.dataTransfer.getData("text/plain");
     setDroppedAnswer(answer);
+    
     if (answer === "Blow bubbles") {
       setIsCorrect(true);
       setTimeout(() => {
-        onNext(); // Move to the next question after a short delay
+        onScoreChange(wrongAttempts * 5);
+        onNext(); 
       }, 1000);
     } else {
       setIsCorrect(false);
+      setWrongAttempts(wrongAttempts + 1); 
     }
   };
 
   const handleDragOver = (event) => {
-    event.preventDefault(); // Allows the drop
+    event.preventDefault(); 
   };
 
   const handleDotClick = (questionIndex) => {
@@ -74,7 +78,7 @@ const QuestionSeven = ({ onNext, onNavigateToQuestion }) => {
         ].map((answer) => (
           <div
             key={answer}
-            className="draggable-answer"
+            className="draggable-answer-seven"
             draggable
             onDragStart={(event) => handleDragStart(event, answer)}
           >

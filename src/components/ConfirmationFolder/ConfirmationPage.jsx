@@ -1,28 +1,38 @@
-import "./ConfirmationPage.css";
+import React from 'react';
+import './ConfirmationPage.css';
+import starImage from '../../assets/star.png';
+import logoImage from '../../assets/logo.png'; 
 
-export const ConfirmationScreen = () => {
+const ConfirmationPage = ({ score }) => {  
+  let title = "";
+  let subtitle = "";
+
+  // Determine the title and subtitle based on the score
+  if (score < 40) {
+    title = "Good Effort!";
+    subtitle = "Maybe next time is the charm!";
+  } else if (score >= 40 && score < 80) {
+    title = "Nice job!";
+    subtitle = "Good to have an animal lover among us!";
+  } else if (score >= 80 && score < 120) {
+    title = "Good job!";
+    subtitle = "Almost a perfect score, what an expert!";
+  } else {
+    title = "Perfect Scorer!";
+    subtitle = "Your flawless quiz performance sets a new standard of excellence!";
+  }
+
   return (
-    <section className="confirmation-screen">
-      <header>
-        <h1 className="app-title">Paw Pops</h1>
-      </header>
-      <figure className="confirmation-star">
-        <img src="../assets/star.png" alt="Happy Star" className="star-image" />
-      </figure>
-      <h2 className="score-title">Purr-fect Score!</h2>
-      <p className="confirmation-message">
-        Your pawsome performance has set a new standard of excellence!
-      </p>
-      <div className="score-badge">
-        <span className="lightning-icon">
-          <img
-            src="../assets/lightning.png"
-            alt="Score"
-            className="score-image"
-          />
-        </span>
-        <span className="score-points"></span>
+    <div className="confirmation-container">
+      <img src={logoImage} alt="Quiz Logo" className="confirmation-logo" />
+      <img src={starImage} alt="Star" className="confirmation-star" />
+      <h1 className="confirmation-title">{title}</h1>
+      <p className="confirmation-subtitle">{subtitle}</p>
+      <div className="score-box">
+        <span className="score">{score} points</span> 
       </div>
-    </section>
+    </div>
   );
 };
+
+export default ConfirmationPage;

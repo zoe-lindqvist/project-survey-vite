@@ -21,7 +21,7 @@
 .welcome-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Aligns content to the left */
+  justify-content: flex-start; 
   flex-grow: 1;
   padding: 80px;
   z-index: 1;
@@ -30,23 +30,23 @@
 .welcome-text {
   text-align: left;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Dark shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
   max-width: 1000px;
 }
 
 .welcome-text h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Dark shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .welcome-text p {
   font-size: 1.2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Dark shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
 }
 
 .start-button {
-  background-color: #c34113; /* Darker orange */
+  background-color: #c34113; 
   color: #fff;
   padding: 10px 20px;
   border: none;

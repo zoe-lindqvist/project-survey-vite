@@ -33,17 +33,17 @@
 }
 
 .checkmark {
-  width: 20px; /* Set a fixed width */
-  height: 20px; /* Set a fixed height */
-  margin-left: 5px; /* Adjust this value to control spacing */
+  width: 20px;
+  height: 20px; 
+  margin-left: 5px;
   position: relative;
-  object-fit: contain; /* Ensure the image fits within the dimensions */
+  object-fit: contain; 
 }
 
 .correct .checkmark {
-  color: #4caf50; /* Color for correct feedback */
+  color: #4caf50; 
 }
 
 .incorrect .checkmark {
-  color: #f44336; /* Color for incorrect feedback */
+  color: #f44336; 
 }

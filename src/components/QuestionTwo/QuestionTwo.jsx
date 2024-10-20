@@ -6,19 +6,21 @@ import positiveIcon from "../../assets/positive.png";
 import negativeIcon from "../../assets/negative.png";
 import "./QuestionTwo.css";
 
-const QuestionTwo = ({ onNext }) => {
-  // Accept onNext as a prop
+const QuestionTwo = ({ onNext, onScoreChange }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
+  const [wrongAttempts, setWrongAttempts] = useState(0);
 
   const handleAnswerClick = (answer) => {
     if (answer === "Each others paws") {
       setIsCorrect(true);
       setTimeout(() => {
-        onNext(); // Move to the next question after a short delay
+        onScoreChange(wrongAttempts * 5); 
+        onNext(); 
       }, 1000);
     } else {
       setIsCorrect(false);
+      setWrongAttempts(wrongAttempts + 1); 
     }
     setSelectedAnswer(answer);
   };
