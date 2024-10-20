@@ -5,7 +5,7 @@ import "./header.css";
 
 const Header = () => {
   return (
-    <header className="header" aria-label="Main header">
+    <header className="Header" aria-label="Main header">
       <img src={logo} alt="Paw Pops Logo" className="logo" />
 
       <button className="search-button" aria-label="Search">
