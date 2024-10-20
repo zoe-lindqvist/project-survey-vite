@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 import searchIcon from "../../assets/search.png";
-import "./header.css";
+import "./Header.css";
 
 const Header = () => {
   return (
