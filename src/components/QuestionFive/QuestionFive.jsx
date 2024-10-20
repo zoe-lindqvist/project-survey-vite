@@ -38,7 +38,7 @@ const QuestionFive = ({ onNext, onScoreChange }) => {
         {[...Array(8)].map((_, index) => (
           <div
             key={index}
-            className={`dot ${index === 5 ? "active" : ""}`} 
+            className={`dot ${index === 4 ? "active" : ""}`} 
             onClick={() => handleDotClick(index)}
           ></div>
         ))}

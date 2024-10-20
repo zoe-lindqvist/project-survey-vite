@@ -36,8 +36,8 @@ const QuestionOne = ({ onNext, onScoreChange }) => {
         aria-valuemax="8"
         aria-label="Quiz progress"
       >
-        <div className="dot"></div>
         <div className="dot active"></div>
+        <div className="dot"></div>
         <div className="dot"></div>
         <div className="dot"></div>
         <div className="dot"></div>
