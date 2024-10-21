@@ -1,62 +1,85 @@
 .quiz-container-eight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f24b4b;
-    height: 100vh;
-    padding: 0;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f24b4b;
+  min-height: 100vh; /* Allow the container to grow */
+  padding: 10px; /* Add some padding */
+  justify-content: flex-start; /* Align items from the top */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .answer-options {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .draggable-answer-eight {
-    padding: 10px;
-    background-color: #2b6639;
-    border-radius: 8px;
-    cursor: grab;
-    width: 150px;
-    text-align: center;
-    margin: 0 10px;
-    color: white;
+  padding: 10px;
+  background-color: #2b6639;
+  border-radius: 8px;
+  cursor: grab;
+  width: 150px;
+  text-align: center;
+  margin: 0 10px;
+  color: white;
 }
 
-.draggable-answer:hover {
-    background-color: #031021;
+.draggable-answer-eight:hover {
+  background-color: #031021;
 }
 
 .drop-zone {
-    margin: 20px auto;
-    padding: 10px 15px;
-    border: 2px dashed #ffffff;
-    border-radius: 10px;
-    text-align: center;
-    color: #2c2c2c;
-    min-height: 60px;
-    max-width: 70%;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border: 2px dashed #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  color: #2c2c2c;
+  min-height: 60px;
+  max-width: 70%;
 }
 
 .correct-text {
-    color: #4caf50;
-    margin-top: 10px;
+  color: #4caf50;
+  margin-top: 10px;
 }
 
 .incorrect-text {
-    color: #f44336;
-    margin-top: 10px;
+  color: #f44336;
+  margin-top: 10px;
 }
 
 .icon-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .result-icon {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .quiz-container-eight {
+    padding: 15px; /* Slight padding adjustment */
+  }
+
+  .drop-zone {
+    max-width: 100%; /* Full width for drop zone on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container-eight {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .drop-zone {
+    max-width: 100%; /* Full width for the drop zone */
+    min-height: 50px; /* Slight height reduction for smaller screens */
+  }
 }

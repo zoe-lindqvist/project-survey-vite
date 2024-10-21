@@ -3,9 +3,10 @@
   flex-direction: column;
   align-items: center;
   background-color: #25401e;
-  height: 100vh;
-  padding: 0;
-  justify-content: space-around;
+  min-height: 100vh; /* Allow the container to grow */
+  padding: 10px; /* Add some padding */
+  justify-content: flex-start; /* Align items from the top */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .dropdown-six {
@@ -17,15 +18,15 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
   background-color: #5f4121;
-  color: white; 
+  color: white;
 }
 
 .correct {
-  background-color: #4caf50 !important; 
+  background-color: #4caf50 !important;
 }
 
 .incorrect {
-  background-color: #f44336 !important; 
+  background-color: #f44336 !important;
 }
 
 .progress-bar {
@@ -55,4 +56,27 @@
   text-align: center;
   color: white;
   margin: 20px 0;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .quiz-container-six {
+    padding: 15px; /* Adjust padding */
+  }
+
+  .dropdown-six {
+    width: 100%; /* Full width for dropdown on smaller screens */
+    font-size: 16px; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container-six {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .dropdown-six {
+    width: 100%; /* Full width for dropdown */
+    font-size: 14px; /* Further reduce font size for small screens */
+  }
 }
