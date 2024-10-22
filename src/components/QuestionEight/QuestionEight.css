@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   background-color: #f24b4b;
-  min-height: 100vh; /* Allow the container to grow */
-  padding: 10px; /* Add some padding */
-  justify-content: flex-start; /* Align items from the top */
-  overflow-y: auto; /* Enable vertical scrolling */
+  min-height: 100vh; 
+  padding: 10px; 
+  justify-content: flex-start; 
+  overflow-y: auto; 
 }
 
 .answer-options {
@@ -62,24 +62,23 @@
   height: 30px;
 }
 
-/* Media queries for smaller screens */
 @media (max-width: 768px) {
   .quiz-container-eight {
-    padding: 15px; /* Slight padding adjustment */
+    padding: 15px; 
   }
 
   .drop-zone {
-    max-width: 100%; /* Full width for drop zone on smaller screens */
+    max-width: 100%; 
   }
 }
 
 @media (max-width: 480px) {
   .quiz-container-eight {
-    padding: 10px; /* Reduce padding */
+    padding: 10px;
   }
 
   .drop-zone {
-    max-width: 100%; /* Full width for the drop zone */
-    min-height: 50px; /* Slight height reduction for smaller screens */
+    max-width: 100%; 
+    min-height: 50px; 
   }
 }
